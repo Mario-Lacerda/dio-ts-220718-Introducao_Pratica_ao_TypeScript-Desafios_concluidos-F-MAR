@@ -1,0 +1,27 @@
+{
+  "name": "dio-ts-220730-challenges",
+  "version": "1.0.0",
+  "description": "TypeScript mentoring solved code challenges.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server",
+    "watch": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iraja-baltezan/dio-ts-220718-Introducao_Pratica_ao_TypeScript-Desafios_concluidos.git"
+  },
+  "author": "Irajá B. J.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iraja-baltezan/dio-ts-220718-Introducao_Pratica_ao_TypeScript-Desafios_concluidos/issues"
+  },
+  "homepage": "https://github.com/iraja-baltezan/dio-ts-220718-Introducao_Pratica_ao_TypeScript-Desafios_concluidos#readme",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
