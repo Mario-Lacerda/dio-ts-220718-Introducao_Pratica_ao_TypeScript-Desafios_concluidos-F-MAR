@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "lite-server",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "dev":"tsc --watch & lite-server"
   },
   "repository": {
     "type": "git",

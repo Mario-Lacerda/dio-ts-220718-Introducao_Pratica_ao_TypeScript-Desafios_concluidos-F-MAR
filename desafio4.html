@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 4 - Introdução ao TypeScript</title>
+    <link rel="stylesheet" href="/assets/desafio4.css">
+</head>
+
+<body>
+    <header class="app-header">
+        <h1 class="title">
+            Desafio 4
+        </h1>
+        <div class="status">
+            Usuário<br/>ANÔNIMO
+        </div>
+        <nav class="nav">
+            <a class="link" href="/" title="Ir para a página inicial">
+                <i class="ico -home"></i>
+                <span class="text">INÍCIO</span>
+            </a>
+            <a class="link"
+                id="show-api-login-button"
+                href="#api-login-section"
+                title="Clique para mostrar o formulário de LOGIN"
+            >
+                <I class="ico -person"></I>
+                <span class="text">LOGIN</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="app-main">
+        <aside class="api-login _to-hide _hidden">
+            <div class="info">
+                <h2 class="title">API do TMDB</h2>
+                <p>
+                    Caso o login seja mal sucedido, talvez as informações padrão
+                    de login e API-Key já tenham perdido sua validade.
+                    Use outro ID, senha e API-Key registrados no
+                    <a href="https://developers.themoviedb.org/3/getting-started/introduction">TMDB</a>
+                    para que este app funcione corretamente.
+                </p>
+                <p class="status">
+                    Faça o login para gerenciar as listas de filmes.
+                </p>
+            </div>
+            <div class="api-login-form">
+                <label>
+                    <span class="text">Usuário</span>
+                    <input id="username" placeholder="Nome de usuário ou e-mail">
+                </label>
+                <label>
+                    <span class="text">Senha</span>
+                    <input id="senha" placeholder="Senha" type="password">
+                </label>
+                <label>
+                    <span class="text">API-Key</span>
+                    <input id="api-key" placeholder="Api Key">
+                </label>
+                <footer class="footer">
+                    <button class="button" id="cancel-login-button">Cancelar</button>
+                    <button class="button" id="login-button" disabled>Login</button>
+                </footer>
+            </div>
+        </aside>
+
+        <section class="search-section">
+            <div class="inputs">
+                <input id="search-input" placeholder="Escreva aqui o filme desejado...">
+                <button id="search-button">Pesquisar Filme</button>
+            </div>
+            <div class="result" id="search-result">
+                <div class="status _to-hide _hidden" id="search-result-status">Registros encontrados: 0</div>
+                <ul class="list _to-hide _hidden" id="search-result-list">
+                    <!-- <li class="item">
+                        <span class="title">${item.title}</span>
+                        <button class="action-add-to-list" data-id="${item.id}">Salvar na lista</button>
+                    </li> -->
+                </ul>
+                <div class="pages _to-hide _hidden" id="search-result-pages">
+                    <button>1</button>
+                    <button disabled>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                </div>
+                <div class="message _to-hide" id="search-result-message">
+                    Busque por filmes...
+                </div>
+            </div>
+        </section>
+        <section class="lists-section">
+            <header class="header">
+                <h2 class="title">
+                    Listas
+                </h2>
+                <div class="actions">
+                    <button id="refresh-list">Atualizar</button>
+                    <button id="show-create-list-form">Nova lista</button>
+                </div>
+            </header>
+            <section class="create-list-form _to-hide _hidden" id="create-list-form">
+                <h3 class="title">Criar nova lista</h3>
+                <label class="label">
+                    <span class="text">Nome da lista *</span>
+                    <input type="text" required id="new-list-name" placeholder="Nome da nova lista...">
+                </label>
+                <label class="label">
+                    <span class="text">Descrição da lista</span>
+                    <textarea id="new-list-description" placeholder="Descrição da nova lista..." rows="3"></textarea>
+                </label>
+                <div class="help">* Preenchimento obrigatório.</div>
+                <div class="status" id="new-list-status"></div>
+                <footer class="footer">
+                    <button id="close-create-list-form" class="close-button">Cancelar</button>
+                    <button id="create-list">Salvar nova lista</button>
+                </footer>
+            </section>
+            <div class="status _to-hide">Faça login para gerenciar as listas.</div>
+            <div class="lists-detail">
+                <div class="lists">
+                    <!-- <button class="item" data-id="123">
+                        <span class="name">Nome da lista</span>
+                        <span class="id">ID: 12341234</span>
+                        <span class="description">Descrição da lista</span>
+                    </button>
+                    <button class="item" data-id="456">
+                        <span class="name">Nome da lista</span>
+                        <span class="id">ID: 12341234</span>
+                        <span class="description">Descrição da lista</span>
+                    </button>
+                    <button class="item" data-id="789">
+                        <span class="name">Nome da lista</span>
+                        <span class="id">ID: 12341234</span>
+                        <span class="description">Descrição da lista</span>
+                    </button>
+                    <button class="item" data-id="2123">
+                        <span class="name">Nome da lista</span>
+                        <span class="id">ID: 12341234</span>
+                        <span class="description">Descrição da lista</span>
+                    </button>
+                    <button class="item" data-id="2456">
+                        <span class="name">Nome da lista</span>
+                        <span class="id">ID: 12341234</span>
+                        <span class="description">Descrição da lista</span>
+                    </button>
+                    <button class="item" data-id="2789">
+                        <span class="name">Nome da lista</span>
+                        <span class="id">ID: 12341234</span>
+                        <span class="description">Descrição da lista</span>
+                    </button> -->
+                </div>
+                <div class="details">
+                    <h3 class="title">Conteúdo da lista selecionada</h3>
+                    <ul class="list">
+                        <!-- <li class="item">
+                            <span class="name">Nome do filme</span>
+                            <span class="actions">
+                                <button class="delete" data-id="111">Delete</button>
+                            </span>
+                        </li>
+                        <li class="item">
+                            <span class="name">Nome do filme</span>
+                            <span class="actions">
+                                <button class="delete" data-id="222">Delete</button>
+                            </span>
+                        </li>
+                        <li class="item">
+                            <span class="name">Nome do filme</span>
+                            <span class="actions">
+                                <button class="delete" data-id="333">Delete</button>
+                            </span>
+                        </li> -->
+                    </ul>
+                    <div class="status">
+                        <!-- Nenhum item encontrado -->
+                    </div>
+                </div><!-- <div class="details"> -->
+            </div><!-- <div class="lists-master-detail"> -->
+
+        </section>
+    </main>
+    <footer class="app-footer">
+        <div class="credit">
+            <span class="text">
+                Este código usa a API do site <a class="_nowrap" href="https://www.themoviedb.org/">The Movie DB</a>
+            </span>
+            <img class="logo" src="assets/tmdb-brand-blue_square_2.svg" alt="The Movie DB">
+        </div>
+    </footer>
+
+
+    <script type="module" src="dist/desafio4.js" defer></script>
+</body>
+
+</html>
