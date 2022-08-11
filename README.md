@@ -6,4 +6,13 @@ Este repositório contém minhas respostas para os desafios de codificação sug
 
 ## Respostas
 
+- [__Desafio 1__: `src/desafio1.ts`](https://github.com/iraja-baltezan/dio-ts-220718-Introducao_Pratica_ao_TypeScript-Desafios_concluidos/blob/main/src/desafio1.ts)
+- [__Desafio 2__: `src/desafio2.ts`](https://github.com/iraja-baltezan/dio-ts-220718-Introducao_Pratica_ao_TypeScript-Desafios_concluidos/blob/main/src/desafio2.ts)
+- [__Desafio 3__: `src/desafio3.ts`](https://github.com/iraja-baltezan/dio-ts-220718-Introducao_Pratica_ao_TypeScript-Desafios_concluidos/blob/main/src/desafio3.ts)
+- [__Desafio 4__: `src/desafio4.ts`](https://github.com/iraja-baltezan/dio-ts-220718-Introducao_Pratica_ao_TypeScript-Desafios_concluidos/blob/main/src/desafio4.ts)
+
+
 Preview da execução das respostas dos desafios 3 e 4 podem ser encontrados em https://iraja-baltezan.github.io/dio-ts-220718-Introducao_Pratica_ao_TypeScript-Desafios_concluidos/
+
+- [Preview do desafio 3](https://iraja-baltezan.github.io/dio-ts-220718-Introducao_Pratica_ao_TypeScript-Desafios_concluidos/desafio3.html)
+- [Preview do desafio 4](https://iraja-baltezan.github.io/dio-ts-220718-Introducao_Pratica_ao_TypeScript-Desafios_concluidos/desafio3.html)
