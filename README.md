@@ -15,4 +15,4 @@ Este repositório contém minhas respostas para os desafios de codificação sug
 Preview da execução das respostas dos desafios 3 e 4 podem ser encontrados em https://iraja-baltezan.github.io/dio-ts-220718-Introducao_Pratica_ao_TypeScript-Desafios_concluidos/
 
 - [Preview do desafio 3](https://iraja-baltezan.github.io/dio-ts-220718-Introducao_Pratica_ao_TypeScript-Desafios_concluidos/desafio3.html)
-- [Preview do desafio 4](https://iraja-baltezan.github.io/dio-ts-220718-Introducao_Pratica_ao_TypeScript-Desafios_concluidos/desafio3.html)
+- [Preview do desafio 4](https://iraja-baltezan.github.io/dio-ts-220718-Introducao_Pratica_ao_TypeScript-Desafios_concluidos/desafio4.html)
